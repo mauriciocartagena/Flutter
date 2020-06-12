@@ -11,14 +11,14 @@ import 'package:componentes/src/pages/listview_page.dart';
 
 Map<String,WidgetBuilder> getApplicationRoutes(){
   return  <String ,WidgetBuilder>{
-        '/'       :(BuildContext context)=>HomePage(),
-        'alert'   :(BuildContext context)=>AlertPage(),
-        AvatarPage.pageName  :(BuildContext context)=>AvatarPage(),
-        'card'    :(BuildContext context)=>CardPage(),
-        'animatedContainer' :(BuildContext context)=>AnimateContainerPage(),
-        'inputs'  :(BuildContext context)=>InputPage(),
-        'slider'  :(BuildContext context)=>SliderPage(),
-        'list'  :(BuildContext context)=>ListaPage(),
+        '/'                     :(BuildContext context)=>HomePage(),
+        'alert'                 :(BuildContext context)=>AlertPage(),
+        AvatarPage.pageName     :(BuildContext context)=>AvatarPage(),
+        'card'                  :(BuildContext context)=>CardPage(),
+        'animatedContainer'     :(BuildContext context)=>AnimateContainerPage(),
+        'inputs'                :(BuildContext context)=>InputPage(),
+        'slider'                :(BuildContext context)=>SliderPage(),
+        'list'                  :(BuildContext context)=>ListaPage(),
   };
 }
 

@@ -14,7 +14,7 @@ class AlertPage extends StatelessWidget {
           child: Text('Mostrar Alerta'),
           color: Colors.blue,
           textColor: Colors.white,
-          onPressed: ()=> _mostrarAlert(context),
+          onPressed: () => _mostrarAlert(context),
           shape: StadiumBorder(),
         )
       ),
