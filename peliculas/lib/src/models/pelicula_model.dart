@@ -3,9 +3,8 @@ class Peliculas {
 
   Peliculas();
 
-  Peliculas.fromJsonList(List<dynamic> jsonList){
-
-    if (jsonList==null) return;
+  Peliculas.fromJsonList(List<dynamic> jsonList) {
+    if (jsonList == null) return;
 
     for (var item in jsonList) {
       final pelicula = new Pelicula.fromJsonMap(item);
@@ -16,7 +15,9 @@ class Peliculas {
 
 //creamos pelicula para volver a asignar
 class Pelicula {
-  //declaramos todos los objetos que tiene la pelicula 
+  
+  String uniqueId;
+  //declaramos todos los objetos que tiene la pelicula
   int voteCount;
   double popularity;
   bool video;
@@ -50,32 +51,34 @@ class Pelicula {
     this.releaseDate,
   });
   //asignacion
-  Pelicula.fromJsonMap(Map<String,dynamic> json){
-
-    voteCount         = json['vote_count'];
-    id                = json['id'];
-    video             = json['video'];
-    posterPath        = json['poster_path'];
-    adult             = json['adult'];
-    backdropPath      = json['backdrop_path'];
-    originalLanguage  = json['original_language'];
-    popularity        = json['popularity']/1;
-    originalTitle     = json['origina_title'];
-    genreIds          = json['genre_ids'].cast<int>();
-    title             = json['title'];
-    voteAverage       = json['vote_average']/1;
-    overview          = json['overview'];
-    releaseDate       = json['release_date'];
-
+  Pelicula.fromJsonMap(Map<String, dynamic> json) {
+    voteCount             = json['vote_count'];
+    id                    = json['id'];
+    video                 = json['video'];
+    posterPath            = json['poster_path'];
+    adult                 = json['adult'];
+    backdropPath          = json['backdrop_path'];
+    originalLanguage      = json['original_language'];
+    popularity            = json['popularity'] / 1;
+    originalTitle         = json['original_title'];
+    genreIds              = json['genre_ids'].cast<int>();
+    title                 = json['title'];
+    voteAverage           = json['vote_average'] / 1;
+    overview              = json['overview'];
+    releaseDate           = json['release_date'];
   }
-  getPosterImg(){
-    if (posterPath==null) {
+  getPosterImg() {
+    if (posterPath == null) {
       return 'https://image.tmdb.org/t/p/original//naXUDz0VGK7aaPlEpsuYW8kNVsr.jpg';
     }
-  return 'https://image.tmdb.org/t/p/original/$posterPath';
+    return 'https://image.tmdb.org/t/p/original/$posterPath';
+  }
+   getBackgroundImg() {
+    if (posterPath == null) {
+      return 'https://image.tmdb.org/t/p/original//naXUDz0VGK7aaPlEpsuYW8kNVsr.jpg';
+    }
+    return 'https://image.tmdb.org/t/p/original/$backdropPath';
+  }
 }
-}
-
-
 
 enum OriginalLanguage { KO, EN, ES }
