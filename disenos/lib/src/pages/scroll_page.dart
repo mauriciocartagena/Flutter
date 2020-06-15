@@ -11,7 +11,7 @@ class ScrollPage extends StatelessWidget {
         children: <Widget>[
           _pagina1(),
           _pagina2(),
-       ],
+      ],
       ),
     );
   }
@@ -24,12 +24,12 @@ class ScrollPage extends StatelessWidget {
         ],
       );
   }
-   Widget _pagina2(){
-     return Container(
-       width: double.infinity,
-       height: double.infinity,
-       color: Color.fromRGBO(108,192,218,1.0),
-       child: Center(
+  Widget _pagina2(){
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Color.fromRGBO(108,192,218,1.0),
+      child: Center(
           child: RaisedButton(
             shape: StadiumBorder(),
             color: Colors.blue,
@@ -43,8 +43,8 @@ class ScrollPage extends StatelessWidget {
               ),
             )
           ),
-       ),
-     );
+      ),
+    );
   }
   Widget _colorFondo(){
     return Container(
@@ -64,9 +64,7 @@ class ScrollPage extends StatelessWidget {
     );
   }
   Widget _textos(){
-vscode://vscode.github-authentication/did-authenticate?windowId=1&code=223932083468be3fad36&state=5a2f4c53-ae8a-417d-91b7-92462435c111
     final estiloTexto = TextStyle(color: Colors.white,fontSize: 50.0);
-
     return SafeArea(
       child: Column(
         children: <Widget>[
