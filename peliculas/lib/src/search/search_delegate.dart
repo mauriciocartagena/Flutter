@@ -91,9 +91,11 @@ class DataSearch extends SearchDelegate{
                     ),
                     title: Text(pelicula.title),
                     subtitle: Text(pelicula.originalTitle),
+                    //ontap selecciona solo uno no varios
                     onTap: (){
                       close(context,null);
-                      pelicula.uniqueId='';
+                      print(context);
+                      pelicula.uniqueId = '${pelicula.id}-search';
                       Navigator.pushNamed(context,'detalle',arguments: pelicula);
                     },
                 );
