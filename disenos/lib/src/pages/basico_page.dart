@@ -8,18 +8,18 @@ class BasicoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          _crearImagen(),
-          _crearTitulo(),
-          _crearAcciones(),
-          _crearTexto(),
-          _crearTexto(),
-          _crearTexto(),
-          _crearTexto(),
-          _crearTexto(),
-        ],
-      ),
+        child: Column(
+          children: <Widget>[
+            _crearImagen(),
+            _crearTitulo(),
+            _crearAcciones(),
+            _crearTexto(),
+            _crearTexto(),
+            _crearTexto(),
+            _crearTexto(),
+            _crearTexto(),
+          ],
+        ),
     ));
   }
 
