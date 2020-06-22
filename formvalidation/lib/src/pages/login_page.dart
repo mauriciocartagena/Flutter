@@ -108,7 +108,7 @@ class LoginPage extends StatelessWidget {
               ],
             ),
           ),
-          Text('Olvido la contraseÃ±a?'),
+          Text('Olvido la contraseña?'),
           SizedBox(height: 100.0),
         ],
       ),
